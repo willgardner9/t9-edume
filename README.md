@@ -1,4 +1,6 @@
-# t9-edume server README
+# t9-EduMe Readme
+
+## Back End Instructions
 
 To start the server in development mode, please copy and paste the following into your terminal:
 
@@ -65,7 +67,7 @@ To run test specs, please enter the following terminal command in the server dir
 
     npm run test
 
-# t9-edume server README
+## Front End Instructions
 
 To start the React app in development mode, please enter the following command into your terminal:
 

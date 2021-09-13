@@ -2,7 +2,7 @@
 
 To start the server in development mode, please copy and paste the following into your terminal:
 
-`cd server && npm run start:dev`
+`cd server && npm i && npm run start:dev`
 
 Then, to copy the dictionary.txt to allow for real word filtering, please enter the following in a new terminal window in the server directory:
 

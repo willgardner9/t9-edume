@@ -64,3 +64,9 @@ For example:
 To run test specs, please enter the following terminal command in the server directory:
 
     npm run test
+
+# t9-edume server README
+
+To start the React app in development mode, please enter the following command into your terminal:
+
+`cd client && npm i && npm run start`

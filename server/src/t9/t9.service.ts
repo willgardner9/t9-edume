@@ -64,27 +64,34 @@ export class T9Service {
     //  load https://github.com/first20hours/google-10000-english as 'dictionary' of common words
     //  as this is a list of common combinations of characters in the English language,
     //  not all entries are necessarily in the dictionary
-    const dictionary = fs.readFileSync(
-      path.resolve(__dirname, 'dictionary.txt'),
-      { encoding: 'utf8', flag: 'r' },
-    );
+    try {
+      const dictionary = fs.readFileSync(
+        path.resolve(__dirname, 'dictionary.txt'),
+        { encoding: 'utf8', flag: 'r' },
+      );
 
-    //  convert dictionary to array
-    const dictionaryArray = dictionary.split('\n');
+      //  convert dictionary to array
+      const dictionaryArray = dictionary.split('\n');
 
-    //  init empty array to populate with matches
-    const filteredCombinations = [];
+      //  init empty array to populate with matches
+      const filteredCombinations = [];
 
-    //  iterate through possible combinations and check to see if they are in the dictionary file
-    allCombinations.forEach((combination) => {
-      const regex = new RegExp(`^${combination}$`);
-      const isAWord = dictionaryArray.filter((word) => word.match(regex));
-      isAWord.length ? filteredCombinations.push(combination) : '';
-    });
+      //  iterate through possible combinations and check to see if they are in the dictionary file
+      allCombinations.forEach((combination) => {
+        const regex = new RegExp(`^${combination}$`);
+        const isAWord = dictionaryArray.filter((word) => word.match(regex));
+        isAWord.length ? filteredCombinations.push(combination) : '';
+      });
 
-    return {
-      allCombinations: { ...[...allCombinations] },
-      filteredCombinations: { ...[...filteredCombinations] },
-    };
+      return {
+        allCombinations: { ...[...allCombinations] },
+        filteredCombinations: { ...[...filteredCombinations] },
+      };
+    } catch (error) {
+      return {
+        allCombinations: { ...[...allCombinations] },
+        filteredCombinations: {},
+      };
+    }
   }
 }

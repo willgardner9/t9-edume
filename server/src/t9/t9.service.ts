@@ -1,10 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { ConverNumbersDto } from './dto/convert-numbers.dto';
 
 @Injectable()
 export class T9Service {
   convertT9NumbersToText(convertNumbersDto: ConverNumbersDto) {
     const { numbers } = convertNumbersDto;
+
+    if (numbers.includes('0') || numbers.includes('1')) {
+      throw new BadRequestException(`You cannot convert a '0' or '1' in t9!`);
+    }
+
     const t9ConversionChart = {
       '2': ['a', 'b', 'c'],
       '3': ['d', 'e', 'f'],

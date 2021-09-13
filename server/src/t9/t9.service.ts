@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { ConverNumbersDto } from './dto/convert-numbers.dto';
 
 @Injectable()
 export class T9Service {
-  convertT9NumbersToText(numbers: string) {
+  convertT9NumbersToText(convertNumbersDto: ConverNumbersDto) {
+    const { numbers } = convertNumbersDto;
     const t9ConversionChart = {
       '2': ['a', 'b', 'c'],
       '3': ['d', 'e', 'f'],
@@ -50,6 +52,7 @@ export class T9Service {
       });
     };
 
-    return t9Converter(numbers);
+    const res = t9Converter(numbers);
+    return { ...[...res] };
   }
 }

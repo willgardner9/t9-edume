@@ -60,3 +60,7 @@ For example:
         "4": "ii"
       }
     }
+
+To run test specs, please enter the following terminal command in the server directory:
+
+    npm run test

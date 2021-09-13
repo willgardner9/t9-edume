@@ -3,10 +3,14 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import PhoneButton from "./components/PhoneButton";
 import PhoneKeyboardLayout from "./components/PhoneKeyboardLayout";
+import PhoneScreen from "./components/PhoneScreen";
 
 function App() {
   const [errorMessage, setErrorMessage] = useState();
-  const [t9Combinations, setT9Combinations] = useState();
+  const [t9Combinations, setT9Combinations] = useState({
+    allCombinations: {},
+    filteredCombinations: {},
+  });
   const [numbers, setNumbers] = useState("44");
 
   useEffect(() => {
@@ -26,6 +30,7 @@ function App() {
 
   return (
     <div className="container">
+      <PhoneScreen t9Combinations={t9Combinations} />
       <PhoneKeyboardLayout>
         <PhoneButton mainDisplay="1" />
         <PhoneButton mainDisplay="2" altDisplay="abc" />

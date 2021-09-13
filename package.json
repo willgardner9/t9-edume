@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/willgardner9/t9-edume/issues"
   },
-  "homepage": "https://github.com/willgardner9/t9-edume#readme"
+  "homepage": "https://github.com/willgardner9/t9-edume#readme",
+  "dependencies": {}
 }

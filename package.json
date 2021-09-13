@@ -1,0 +1,20 @@
+{
+  "name": "t9-edume",
+  "version": "1.0.0",
+  "description": "To start the server in development mode, please copy and paste the following into your terminal:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willgardner9/t9-edume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willgardner9/t9-edume/issues"
+  },
+  "homepage": "https://github.com/willgardner9/t9-edume#readme"
+}

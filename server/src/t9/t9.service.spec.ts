@@ -28,15 +28,27 @@ describe('t9Service', () => {
     it('converts t9 input numbers to text', () => {
       expect(t9Service.convertT9NumbersToText(mockConvertNumbersDto23)).toEqual(
         {
-          '0': 'ad',
-          '1': 'ae',
-          '2': 'af',
-          '3': 'bd',
-          '4': 'be',
-          '5': 'bf',
-          '6': 'cd',
-          '7': 'ce',
-          '8': 'cf',
+          allCombinations: {
+            '0': 'ad',
+            '1': 'ae',
+            '2': 'af',
+            '3': 'bd',
+            '4': 'be',
+            '5': 'bf',
+            '6': 'cd',
+            '7': 'ce',
+            '8': 'cf',
+          },
+          filteredCombinations: {
+            '0': 'ad',
+            '1': 'ae',
+            '2': 'af',
+            '3': 'bd',
+            '4': 'be',
+            '5': 'cd',
+            '6': 'ce',
+            '7': 'cf',
+          },
         },
       );
     });

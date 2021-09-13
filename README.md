@@ -31,15 +31,13 @@ And responds with the following response object:
 
 For example:
 
-    Request:
-
+    Request
     POST http://localhost:9000/t9
     {
     	numbers: '44'
     }
 
     Response:
-    POST http://localhost:9000/t9
     {
       "allCombinations": {
         "0": "gg",

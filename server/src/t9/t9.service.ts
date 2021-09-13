@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { ConverNumbersDto } from './dto/convert-numbers.dto';
+import { ConvertNumbersDto } from './dto/convert-numbers.dto';
 import * as fs from 'fs';
 import * as path from 'path';
 
 @Injectable()
 export class T9Service {
-  convertT9NumbersToText(convertNumbersDto: ConverNumbersDto) {
+  convertT9NumbersToText(convertNumbersDto: ConvertNumbersDto) {
     const { numbers } = convertNumbersDto;
 
     if (!numbers) {

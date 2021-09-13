@@ -8,6 +8,12 @@ export class T9Service {
   convertT9NumbersToText(convertNumbersDto: ConverNumbersDto) {
     const { numbers } = convertNumbersDto;
 
+    if (!numbers) {
+      throw new BadRequestException(
+        `You need to supply some numbers to convert`,
+      );
+    }
+
     if (numbers.includes('0') || numbers.includes('1')) {
       throw new BadRequestException(`You cannot convert a '0' or '1' in t9!`);
     }

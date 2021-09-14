@@ -1,4 +1,5 @@
 import React from "react";
+import PhoneScreenList from "./PhoneScreenList";
 
 export default function PhoneScreen({t9Combinations}) {
   const {allCombinations, filteredCombinations} = t9Combinations;
@@ -14,42 +15,14 @@ export default function PhoneScreen({t9Combinations}) {
           </h1>
         )}
         {/* else display first filtered combinations then all combinations */}
-        {filteredCombinations[0] ? (
-          <>
-            <h1 className="phone-screen-display-text">Real words:</h1>
-            <ul className="combination-list">
-              {Object.keys(filteredCombinations).map((combination, i) => (
-                <li key={combination} className="phone-screen-display-text">
-                  <span className="list-number-text">
-                    {parseInt(combination) + 1}:{" "}
-                  </span>
-                  {filteredCombinations[i]}
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : (
-          ""
-        )}
-        {allCombinations[0] ? (
-          <>
-            <h1 className="phone-screen-display-text all-combinations-heading">
-              All combinations
-            </h1>
-            <ul className="combination-list">
-              {Object.keys(allCombinations).map((combination, i) => (
-                <li key={combination} className="phone-screen-display-text">
-                  <span className="list-number-text">
-                    {parseInt(combination) + 1}:{" "}
-                  </span>
-                  {allCombinations[i]}
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : (
-          ""
-        )}
+        <PhoneScreenList
+          combinationsList={filteredCombinations}
+          headingText="Real words"
+        />
+        <PhoneScreenList
+          combinationsList={allCombinations}
+          headingText="All combinations"
+        />
       </div>
     </section>
   );

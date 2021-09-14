@@ -7,7 +7,6 @@
 .container {
   margin: auto auto;
   max-width: 300px;
-  margin-top: 4rem;
 }
 
 .phone-body {
@@ -19,7 +18,6 @@
   border-bottom-right-radius: 10%;
   background: linear-gradient(90deg, #29292b, #50505a, #29292b);
   box-shadow: inset 1px 1px 8px #ffffff4f, 1px 5px 5px 1px #00000038;
-  border: 2px solid #08060a59;
 }
 
 .phone-shadow {
@@ -50,6 +48,7 @@
   border: 1px solid #3b3f3c;
   background: radial-gradient(#7aab85, #55755c);
   overflow-y: scroll;
+  padding: 1rem;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -58,10 +57,11 @@
   display: none;
 }
 
-.phone-screen h1 {
+.phone-screen-display-text {
   font-family: monospace;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 1.25rem;
+  width: 170px;
+  text-transform: uppercase;
 }
 
 .phone-keyboard-layout {
@@ -69,7 +69,6 @@
   gap: 7.5px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  background-color: #343436;
 }
 
 .phone-button {
@@ -79,7 +78,7 @@
   background-color: #343435;
   color: #f5f5f7;
   border-radius: 0.75rem;
-  border: 3px solid #08060a;
+  border: 3px solid #08060aa9;
   box-shadow: inset 0 1px 0 #7c7c92, inset 0 1px 1px 2px #434346;
   background: linear-gradient(90deg, #1a1a1a1a, transparent, #1a1a1a1a),
     linear-gradient(180deg, #7c7c927d, transparent);
@@ -112,4 +111,19 @@
   margin-bottom: 0.5rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.combination-list {
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+}
+
+.list-number-text {
+  font-size: 0.75rem;
+}
+
+.all-combinations-heading {
+  margin-top: 1rem;
 }

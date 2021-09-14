@@ -1,13 +1,31 @@
+/* Imports */
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
+
+/* Global and positioning elements */
 
 * {
   font-family: "Lato", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  background-color: #6d6e75;
+  background: linear-gradient(90deg, #1e1d20, #505059, #1e1d20);
 }
 
 .container {
   margin: auto auto;
   max-width: 300px;
 }
+
+/* Phone body elements */
 
 .phone-body {
   background-color: #343436;
@@ -27,6 +45,8 @@
   z-index: -10;
   filter: blur(10px);
 }
+
+/* Phone screen elements */
 
 .phone-screen-container {
   height: 250px;
@@ -63,6 +83,23 @@
   width: 170px;
   text-transform: uppercase;
 }
+
+.combination-list {
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+}
+
+.list-number-text {
+  font-size: 0.75rem;
+}
+
+.all-combinations-heading {
+  margin-top: 1rem;
+}
+
+/* Phone keyboard elements */
 
 .phone-keyboard-layout {
   display: grid;
@@ -111,19 +148,4 @@
   margin-bottom: 0.5rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-}
-
-.combination-list {
-  list-style: none;
-  margin-block-start: 0;
-  padding-inline-start: 0;
-  margin-block-end: 0;
-}
-
-.list-number-text {
-  font-size: 0.75rem;
-}
-
-.all-combinations-heading {
-  margin-top: 1rem;
 }

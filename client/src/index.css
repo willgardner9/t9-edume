@@ -1,20 +1,10 @@
+/* GENERAL CSS RESET */
+
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-#root {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-html {
-  background-color: #6d6e75;
-  background: linear-gradient(90deg, #1e1d20, #505059, #1e1d20);
 }
 
 /* Remove default margin */

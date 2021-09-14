@@ -4,6 +4,8 @@ import axios from "axios";
 import PhoneButton from "./components/PhoneButton";
 import PhoneKeyboardLayout from "./components/PhoneKeyboardLayout";
 import PhoneScreen from "./components/PhoneScreen";
+import PhoneBody from "./components/PhoneBody";
+import PhoneShadow from "./components/PhoneShadow";
 
 function App() {
   const [errorMessage, setErrorMessage] = useState();
@@ -30,21 +32,24 @@ function App() {
 
   return (
     <div className="container">
-      <PhoneScreen t9Combinations={t9Combinations} />
-      <PhoneKeyboardLayout>
-        <PhoneButton mainDisplay="1" />
-        <PhoneButton mainDisplay="2" altDisplay="abc" />
-        <PhoneButton mainDisplay="3" altDisplay="def" />
-        <PhoneButton mainDisplay="4" altDisplay="ghi" />
-        <PhoneButton mainDisplay="5" altDisplay="jkl" />
-        <PhoneButton mainDisplay="6" altDisplay="mno" />
-        <PhoneButton mainDisplay="7" altDisplay="pqrs" />
-        <PhoneButton mainDisplay="8" altDisplay="tuv" />
-        <PhoneButton mainDisplay="9" altDisplay="wxyz" />
-        <PhoneButton mainDisplay="*" />
-        <PhoneButton mainDisplay="0" altDisplay="+" />
-        <PhoneButton mainDisplay="#" />
-      </PhoneKeyboardLayout>
+      <PhoneBody>
+        <PhoneScreen t9Combinations={t9Combinations} />
+        <PhoneKeyboardLayout>
+          <PhoneButton mainDisplay="1" />
+          <PhoneButton mainDisplay="2" altDisplay="abc" />
+          <PhoneButton mainDisplay="3" altDisplay="def" />
+          <PhoneButton mainDisplay="4" altDisplay="ghi" />
+          <PhoneButton mainDisplay="5" altDisplay="jkl" />
+          <PhoneButton mainDisplay="6" altDisplay="mno" />
+          <PhoneButton mainDisplay="7" altDisplay="pqrs" />
+          <PhoneButton mainDisplay="8" altDisplay="tuv" />
+          <PhoneButton mainDisplay="9" altDisplay="wxyz" />
+          <PhoneButton mainDisplay="*" />
+          <PhoneButton mainDisplay="0" altDisplay="+" />
+          <PhoneButton mainDisplay="#" />
+        </PhoneKeyboardLayout>
+      </PhoneBody>
+      <PhoneShadow />
       <form>
         <input type="number" onChange={(e) => setNumbers(e.target.value)} />
       </form>

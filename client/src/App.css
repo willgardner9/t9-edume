@@ -7,13 +7,34 @@
 .container {
   margin: auto auto;
   max-width: 300px;
+  margin-top: 4rem;
+}
+
+.phone-body {
+  background-color: #343436;
+  padding: 1.5rem;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background: linear-gradient(90deg, #29292b, #50505a, #29292b);
+  box-shadow: inset 1px 1px 8px #ffffff4f, 1px 5px 5px 1px #00000038;
+  border: 2px solid #08060a59;
+}
+
+.phone-shadow {
+  height: 20px;
+  background: #00000096;
+  transform: translateY(-10px);
+  z-index: -10;
+  filter: blur(10px);
 }
 
 .phone-screen-container {
   height: 250px;
   width: 100%;
   background-color: #2c2b29;
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 1px #7c7c92, inset 0 2px 2px 4px #1f1e1d;
@@ -29,6 +50,12 @@
   border: 1px solid #3b3f3c;
   background: radial-gradient(#7aab85, #55755c);
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.phone-screen::-webkit-scrollbar {
+  display: none;
 }
 
 .phone-screen h1 {
